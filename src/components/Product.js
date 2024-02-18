@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import 'react-lazy-load-image-component/src/effects/blur.css';
+import "react-lazy-load-image-component/src/effects/blur.css";
 function Product({ product, id }) {
   return (
     <>
@@ -13,8 +13,7 @@ function Product({ product, id }) {
         }}
         onMouseLeave={(e) => {
           document.getElementsByClassName("item-hover")[id].style.opacity = 0;
-        }}
-      >
+        }}>
         <div className="product-img">
           <LazyLoadImage
             alt="Product image"
@@ -25,7 +24,7 @@ function Product({ product, id }) {
           />
         </div>
         <div className="product-info">
-          <p>{product.price}</p>
+          <p>&#8377; {product.price}</p>
           <div className="product-title">
             <h5>{product.title}</h5>
             <ul>
@@ -46,8 +45,7 @@ function Product({ product, id }) {
               onMouseLeave={() => {
                 document.getElementsByClassName("bx-search")[id].style.color =
                   "black";
-              }}
-            ></i>
+              }}></i>
           </Link>
           <i
             class="bx bx-heart"
@@ -58,8 +56,7 @@ function Product({ product, id }) {
             onMouseLeave={() => {
               document.getElementsByClassName("bx-heart")[id].style.color =
                 "black";
-            }}
-          ></i>
+            }}></i>
           <i
             class="bx bx-shopping-bag"
             onMouseEnter={() => {
@@ -71,8 +68,7 @@ function Product({ product, id }) {
               document.getElementsByClassName("bx-shopping-bag")[
                 id
               ].style.color = "black";
-            }}
-          ></i>
+            }}></i>
         </div>
       </div>
     </>
